@@ -1,0 +1,28 @@
+.boutique {
+    margin-bottom: 100px;
+
+    .wrapper {
+        h2 {
+            text-align: center;
+        }
+
+        .all_pot {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 30px;
+        }
+    }
+
+    @media screen and (max-width: 1025px) {
+        .wrapper {
+            .all_pot {
+                grid-template-columns: 1fr;
+            }
+
+            h2 {
+                background-size: 100% 100%;
+                text-align: center;
+            }
+        }
+    }
+}

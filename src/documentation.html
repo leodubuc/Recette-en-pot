@@ -1,0 +1,39 @@
+{% include '_partials/_header.html' %}
+
+<div class="wrapper documentation">
+    <h2>Documentation vidéo</h2>
+
+    <section>
+        <h3>Description de la composante</h3>
+        <p>Cette composante permet de jouer des vidéo et de changer les miniatures des vidéos.</p>
+    </section>
+
+    <section>
+        <h3>Dépendances</h3>
+        <p>Il n'y a aucune dépendance</p>
+    </section>
+
+    <section>
+        <h3>Comment l'utiliser (HTML + CSS)</h3>
+
+        <h4>HMTL</h4>
+        <p>
+            Dans le HTML, il faut ajouter un div avec un data-component et un data-video-id qui sert a savoir quel vidéo
+            jouer
+        </p>
+        <p>div class="video" data-component="Video" data-video-id="jxCJgTMTUhs"> /div</p>
+
+        <h4>CSS</h4>
+        <p>Le CSS sert à modifier la miniature de la vidéo.</p>
+    </section>
+
+    <section>
+        <h3>Tous les paramètres ajustables avec les attributs data</h3>
+        <p>Le data <strong>data-video-id</strong> sert à savoir quel vidéo jouer</p>
+        <p>div class="video" data-component="Video" data-video-id="jxCJgTMTUhs"> /div</p>
+
+        <p>Le data <strong>data-component="Video"</strong> sert à cibler la vidéo a partir du javascript</p>
+        <p>div class="video" data-component="Video" data-video-id="jxCJgTMTUhs"> /div</p>
+    </section>
+</div>
+{% include '_partials/_footer.html' %}

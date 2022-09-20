@@ -1,0 +1,42 @@
+.option {
+    margin-bottom: 100px;
+
+    .wrapper {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+
+        .gros {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .option {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .choix {
+            h5 {
+                margin-top: 50px;
+            }
+
+            p {
+                margin: 40px 0;
+            }
+        }
+    }
+
+    @media screen and (max-width: 1025px) {
+        .wrapper {
+            .gros {
+                display: flex;
+                flex-direction: column;
+            }
+
+            .choix {
+                margin-bottom: 50px;
+            }
+        }
+    }
+}

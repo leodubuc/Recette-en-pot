@@ -1,0 +1,50 @@
+.hero {
+    position: relative;
+    height: 500px;
+
+    .bg_hero {
+        background-image: url(../assets/images/hero.jpg);
+        filter: blur(6px);
+        height: 500px;
+        width: 100%;
+
+        position: absolute;
+    }
+
+    .hero_text {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+
+        z-index: 2;
+    }
+
+    p {
+        color: var(--color-white);
+        margin: 50px 0;
+        z-index: 2;
+    }
+
+    a {
+        z-index: 2;
+    }
+
+    h1 {
+        z-index: 2;
+    }
+
+    .wrapper {
+        display: flex;
+        height: 100%;
+    }
+
+    @media screen and (max-width: 750px) {
+        .wrapper {
+            h1 {
+                font-size: 50px;
+            }
+        }
+    }
+}

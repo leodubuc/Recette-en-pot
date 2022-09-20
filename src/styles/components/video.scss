@@ -1,0 +1,44 @@
+.video {
+    background-color: black;
+
+    color: var(-- color-white);
+    text-align: center;
+    height: 0;
+    padding-bottom: 56.25%;
+    position: relative;
+    cursor: pointer;
+
+    img {
+        object-fit: cover;
+        height: 100%;
+        width: 100%;
+    }
+
+    .icon {
+        opacity: 0;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        text-shadow: 0e4px rgba(0, 0, 0, 1);
+        transition: 0.4s$ease-out-expo;
+        transition-property: opacity, transform;
+        transform-origin: 00;
+        transform: rotate(180deg) translate(-50%, 50%);
+        z-index: 2;
+        width: 50%;
+        height: 50%;
+        color: white;
+
+        .is-video-ready & {
+            opacity: 1;
+        }
+    }
+
+    &:hover .icon {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+}
+
+.video_media {
+    @include cover();
+}

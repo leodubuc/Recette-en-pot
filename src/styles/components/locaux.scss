@@ -1,0 +1,39 @@
+.locaux {
+    margin-bottom: 100px;
+
+    .wrapper {
+        text-align: center;
+
+        p {
+            text-align: center;
+        }
+
+        .rempli {
+            width: 100%;
+            background-color: black;
+            height: 100px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 25px;
+        }
+    }
+
+    @media screen and (max-width: 1025px) {
+        .wrapper {
+            .grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    }
+
+    @media screen and (max-width: 500) {
+        .wrapper {
+            .h2 {
+                background-size: 100% 100%;
+            }
+        }
+    }
+}

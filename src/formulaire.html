@@ -1,0 +1,159 @@
+{% include '_partials/_header.html' %}
+
+<section class="formulaire">
+    <div class="wrapper">
+        <h1>Formulaire à remplir</h1>
+
+        <h2>Coordonné</h2>
+
+        <div>
+            <form action="" class="form" autocomplete="off" data-component="Form">
+                <fieldset class="grid">
+                    <div class="input">
+                        <label class="input__label" for="name">Nom</label>
+                        <input
+                            class="input__element"
+                            type="text"
+                            name="fullname"
+                            id="fullname"
+                            placeholder="ex : Léo"
+                            
+                        />
+                    </div>
+
+                    <div class="input">
+                        <label class="input__label" for="email">Prénom</label>
+                        <input class="input__element" type="email" name="email" id="email" placeholder="ex : Dubuc" />
+                    </div>
+
+                    <div class="input">
+                        <label class="input__label" for="phone">Numéro De Téléphone</label>
+                        <input class="input__element" type="tel" name="email" id="email" placeholder="(123) 456-7890" required />
+                    </div>
+
+                    <div class="input">
+                        <label class="input__label" for="mail">Courriel</label>
+                        <input class="input__element" type="tel" name="email" id="email" placeholder="allo@gmail.com" required />
+                    </div>
+
+                    <div class="input">
+                        <label class="input__label" for="name">Méthode préférée pour vous joindre</label>
+                        <div class="selection">
+                            <div class="margin">
+                                <input class="case" type="hidden" id="yn" value="no" ng-model="isFull" checked>
+                                <input class="case" type="checkbox" id="yn" value="yes" ng-model="isFull">
+                                <label for="yn">Téléphone</label>
+                            </div>
+
+                            <div class="">
+                                <input class="case" type="hidden" id="yn" value="no" ng-model="isFull" checked>
+                                <input class="case" type="checkbox" id="yn" value="yes" ng-model="isFull">
+                                <label for="yn">Adresse Courriel</label>
+                            </div>
+                    </div>
+                </div>
+                </fieldset>
+
+                
+            </form>
+        </div>
+
+        <h2>Votre campagne</h2>
+        <div>
+            <form action="" class="form" autocomplete="off">
+                <fieldset class="grid">
+                    <div class="input">
+                        <label class="input__label" for="email">nom de la campagne</label>
+                        <input class="input__element" type="email" name="email" id="email" />
+                    </div>
+
+                    <div class="input select">
+                        <label class="input__label" for="province">Type d’organisation</label>
+                        <select name="province" id="province" class="input__element" required>
+                            <option value="" hidden>Choisir une organisation</option>
+                            <option value="ec">école</option>
+                            <option value="cs">club sportif</option>
+                            <option value="cdlpe">centre de la Petite Enfance</option>
+                            <option value="fo">fondation</option>
+                            <option value="org">organisme</option>
+                            <option value="ass">association</option>
+                            <option value="ep">entreprise privée</option>
+                            <option value="au">autre</option>
+                        </select>
+                    </div>
+
+                    <div class="input select">
+                        <label class="input__label" for="province">durée de la campagne</label>
+                        <select name="province" id="province" class="input__element" required>
+                            <option value="" hidden>
+                                <svg class="icon">
+                                    <use xlink:href="#icon-calendrier"></use>
+                                </svg>
+                            </option>
+                            <option value="qc">Québec</option>
+                            <option value="on">Ontario</option>
+                            <option value="al">Alberta</option>
+                        </select>
+                    </div>
+
+                    <div class="input">
+                        <label class="input__label" for="phone">Montant visée pour la campagne</label>
+                        <input class="input__element" type="tel" name="email" id="email" />
+                    </div>
+
+                    <div class="input textarea u-grid-fullwidth">
+                        <label class="input__label" for="comment">Description de la campagne *</label>
+                        <textarea class="input__element" name="comment" id="comment"></textarea>
+                        <p>*information facultative</p>
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+
+        <h2>Mode de paiment</h2>
+        <div>
+            <form action="" class="form" autocomplete="off">
+                <fieldset class="grid">
+                    <div class="input">
+                        <label class="input__label" for="name">Numéro de carte</label>
+                        <input
+                            class="input__element"
+                            type="text"
+                            name="fullname"
+                            id="fullname"
+                            placeholder="1234 5678 8901 2345"
+                        />
+                    </div>
+
+                    <div class="input">
+                        <label class="input__label" for="email">Date d'expiration</label>
+                        <input class="input__element" type="email" name="email" id="email" placeholder="MM/AA" />
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+    </div>
+    
+    <div class="form_footer">
+        <button class="button" type="submit">Joindre les rangs</button>
+    </div>  
+
+    <button class="buttonSpecial" data-component="Modal" data-modal-id="tpl-modal">Cliquez ici</button>
+</section>
+
+
+<template id="tpl-modal" data-modal="auto" >
+    <div class="modal" >
+        <div class="modal__scrim"></div>
+            <div class="modal__box">
+                <div class="modal__content">
+                    <h3>Avez-vous plus de 18 ans ?</h3>
+                </div>
+
+                <button class="modal__close js-close"></button>
+            </div>
+        </div>
+    </div>
+</template>
+
+{% include '_partials/_footer.html' %}

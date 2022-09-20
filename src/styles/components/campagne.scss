@@ -1,0 +1,34 @@
+.campagne {
+    margin-bottom: 100px;
+
+    .wrapper {
+        h2 {
+            text-align: center;
+        }
+
+        .swiper-slide {
+            .button {
+                margin-top: 45px;
+            }
+        }
+    }
+
+    @media screen and (max-width: 1025px) {
+        .wrapper {
+            .swiper-slide {
+                display: flex;
+                justify-content: center;
+
+                img {
+                    margin-right: 0px;
+                    width: 75%;
+                    height: 75%;
+                }
+
+                .swiper_contenu {
+                    display: none;
+                }
+            }
+        }
+    }
+}

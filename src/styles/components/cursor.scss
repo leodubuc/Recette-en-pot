@@ -1,0 +1,38 @@
+.cursor {
+    width: 12px;
+    height: 12px;
+    background: tomato;
+    border-radius: 100%;
+    position: absolute;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+
+    &.hover {
+        background: gray;
+    }
+    &.down {
+        background: rgb(109, 109, 109);
+        width: 8px;
+        height: 8px;
+    }
+
+    &.sombre {
+        background: blue;
+
+        &:hover {
+            background: rgb(0, 0, 133);
+        }
+    }
+    .espace {
+        margin: 0 30px;
+    }
+}
+
+.testDarkMode {
+    width: 100%;
+    height: 700px;
+    background: var(--color-primary);
+    padding: 50px;
+
+    text-align: center;
+}
